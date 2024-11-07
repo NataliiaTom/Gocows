@@ -1,0 +1,552 @@
+/* Opinionated CSS defaults based on:
+  ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css 
+*/
+
+html {
+  line-height: 1.2;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.casino-count {
+  color: #666;
+}
+
+.casino-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.casino-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+}
+
+.casino-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.casino-details h3 {
+  color: #0088ff;
+  margin-bottom: 5px;
+}
+
+.new-badge {
+  background: #4caf50;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stars {
+  color: #ffd700;
+}
+
+.bonus-info {
+  text-align: left;
+  color: #666;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bonus-info div {
+  display: block;
+  padding: 8px 15px;
+  border-radius: 25px;
+  color: #666;
+  min-height: 36px;
+  text-align: center;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.visit-btn {
+  background: #0088ff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.visit-btn:hover {
+  background: #0066cc;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.hovers-btn {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hovers-btn.hover-view {
+  background-color: #000000;
+}
+
+.hovers-btn.default {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.casino-count {
+  color: #666;
+  margin-right: 20px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Add these styles to your existing CSS */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hovers-btn {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hovers-btn.default {
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* Update the header style */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.hovers-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 25px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Default view styles */
+.casino-row {
+  /* Your existing styles */
+}
+
+/* Hover view styles */
+.casino-row.hover-view {
+  /* Add styles for hover view */
+  /* You can modify this based on how you want the hover view to look */
+}
+
+/* Default style (outlined button) */
+.load-more {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 20px 0;
+  background-color: white;
+  color: #3498ff;
+  border: 1px solid #3498ff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Hover view style (filled button) */
+.load-more.hover-view {
+  background-color: #3498ff;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.load-more:hover {
+  background-color: #2980ff;
+  color: white;
+}
+
+.bonus-info p:first-child {
+  display: inline-block;
+  background-color: #f0f4f9;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.bonus-info p:last-child {
+  display: inline-block;
+  background-color: #f5f5f5;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.close {
+  font-size: 28px;
+  font-weight: normal;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.promo-code {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+}
+
+.promo-code p {
+  margin: 0;
+  font-size: 24px;
+  color: #666;
+}
+
+.copy-success {
+  display: none;
+  text-align: center;
+  color: #4caf50;
+  padding: 20px 20px;
+  margin: 0 0 10px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -2%;
+  width: 80%;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.copy-success:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
+
+.copy-success.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.bonus-details {
+  margin-top: 20px;
+}
+
+.detail-item {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.label {
+  font-weight: bold;
+  color: #000;
+}
+
+.free {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Animation for success message */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.show-success {
+  display: block;
+  animation: fadeOut 2s forwards;
+}
+
+.bonus-info div:first-child {
+  transition: none;
+  cursor: default;
+}
+
+/* Only apply hover effects and pointer cursor to non-empty divs */
+.bonus-info div:first-child:not(:empty) {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.bonus-info div:first-child:not(:empty):hover {
+  background-color: #e6f3ff;
+  color: #0088ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove the hidden class */
+.hidden {
+  visibility: visible !important;
+  background-color: transparent !important;
+}

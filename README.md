@@ -1,0 +1,2 @@
+# gocows
+A JavaScript project

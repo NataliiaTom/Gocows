@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Casino Reviews</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Online Casino Reviews</h1>
+
+      <div class="header-container">
+        <div class="left-section">
+          <h2>All Casinos</h2>
+        </div>
+        <div class="right-section">
+          <span class="casino-count">1,138 Casinos</span>
+          <button id="hoversButton" class="hovers-btn">HOVERS</button>
+        </div>
+      </div>
+
+      <div id="casino-list">
+        <!-- Casino cards will be inserted here -->
+      </div>
+
+      <button class="load-more">Load More Casinos (+5)</button>
+    </div>
+
+    <div id="freeSpinsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>20 Free Spins at 21 Dukes Casino</h2>
+          <span class="close">&times;</span>
+        </div>
+
+        <div class="copy-success" id="copySuccess">
+          <span class="check-icon">✓</span> Code copied to clipboard.
+        </div>
+
+        <div class="promo-code" id="promoCode">
+          <p>WELCOME</p>
+        </div>
+
+        <div class="bonus-details">
+          <p>
+            <strong>Games allowed:</strong> Slots, Keno, Scratch Cards, Bingo
+          </p>
+          <p><strong>Max cash out:</strong> $100</p>
+          <p><strong>Min. deposit:</strong> <span class="free">FREE</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const casinos = [
+        {
+          name: "Sports Interaction Casino",
+          logo: "https://placeholder.com/80x80",
+          rating: 4.4,
+          isNew: true,
+          freeSpins: "20 Free Spins",
+          bonus: "200% First deposit bonus + 250 FS",
+        },
+        {
+          name: "21 Dukes Casino",
+          logo: "https://placeholder.com/80x80",
+          rating: 4.4,
+          isNew: false,
+          freeSpins: "20 Free Spins",
+          bonus: "200% First deposit bonus + 250 FS",
+        },
+        {
+          name: "AC Casino",
+          logo: "https://placeholder.com/80x80",
+          rating: 4.4,
+          isNew: true,
+          freeSpins: "50 Free Spins",
+          bonus: "200% First deposit bonus",
+        },
+        {
+          name: "All Irish Casino",
+          logo: "https://placeholder.com/80x80",
+          rating: 4.4,
+          isNew: false,
+          freeSpins: "",
+          bonus: "100% First deposit bonus + 70 FS",
+        },
+      ];
+
+      function createStars(rating) {
+        return (
+          "★".repeat(Math.floor(rating)) + "☆".repeat(5 - Math.floor(rating))
+        );
+      }
+
+      function createCasinoCard(casino) {
+        const bonusSection = casino.noDepositBonus
+          ? `<div>${casino.noDepositBonus}</div><div>${casino.bonus}</div>`
+          : casino.freeSpins
+          ? `<div>${casino.freeSpins}</div><div>${casino.bonus}</div>`
+          : `<div>${casino.bonus}</div>`;
+
+        return `
+    <div class="casino-card">
+      <div class="casino-info">
+        <img src="${casino.logo}" alt="${casino.name}" class="casino-logo">
+        <div class="casino-details">
+          ${casino.isNew ? '<span class="new-badge">NEW</span>' : ""}
+          <h3>${casino.name} Review</h3>
+          <div class="rating">
+            🇺🇸
+            ${casino.rating}
+            <span class="stars">${createStars(casino.rating)}</span>
+          </div>
+        </div>
+      </div>
+      <div class="bonus-info">
+        ${bonusSection}
+      </div>
+      <button class="visit-btn">VISIT</button>
+    </div>
+  `;
+      }
+
+      function displayCasinos() {
+        const casinoList = document.getElementById("casino-list");
+        casinoList.innerHTML = casinos
+          .map((casino) => createCasinoCard(casino))
+          .join("");
+      }
+
+      // Initial display
+      displayCasinos();
+    </script>
+    <script src="../src/main.js"></script>
+  </body>
+</html>
