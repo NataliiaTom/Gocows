@@ -99,7 +99,7 @@
         const bonusSection = casino.noDepositBonus
           ? `<div>${casino.noDepositBonus}</div><div>${casino.bonus}</div>`
           : casino.freeSpins
-          ? `<div>${casino.freeSpins}</div><div>${casino.bonus}</div>`
+          ? `<div class="free-spins-trigger" data-casino="${casino.name}" data-spins="${casino.freeSpins}">${casino.freeSpins}</div><div>${casino.bonus}</div>`
           : `<div>${casino.bonus}</div>`;
 
         return `
@@ -110,8 +110,7 @@
           ${casino.isNew ? '<span class="new-badge">NEW</span>' : ""}
           <h3>${casino.name} Review</h3>
           <div class="rating">
-            🇺🇸
-            ${casino.rating}
+            🇺🇸 ${casino.rating}
             <span class="stars">${createStars(casino.rating)}</span>
           </div>
         </div>

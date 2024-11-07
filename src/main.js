@@ -13,31 +13,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("freeSpinsModal");
   const freeSpinsButton = document.querySelector(".bonus-info div:first-child");
   const closeButton = document.querySelector(".close");
+  const modalTitle = document.querySelector("#freeSpinsModal .modal-header h2");
 
-  freeSpinsButton.addEventListener("click", () => {
-    modal.style.display = "block";
+  // freeSpinsButton.addEventListener("click", () => {
+  //   modal.style.display = "block";
+  // });
+
+  // closeButton.addEventListener("click", () => {
+  //   modal.style.display = "none";
+  // });
+
+  // window.addEventListener("click", (event) => {
+  //   if (event.target === modal) {
+  //     modal.style.display = "none";
+  //   }
+  // });
+
+  const promoCode = document.getElementById("promoCode");
+  const copySuccess = document.getElementById("copySuccess");
+
+  // promoCode.addEventListener("click", async () => {
+  //   const codeText = "WELCOME";
+  //   try {
+  //     await navigator.clipboard.writeText(codeText);
+  //     copySuccess.classList.add("show-success");
+
+  //     // Remove the success message after animation
+  //     setTimeout(() => {
+  //       copySuccess.classList.remove("show-success");
+  //     }, 2000);
+  //   } catch (err) {
+  //     console.error("Failed to copy text: ", err);
+  //   }
+  // });
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("free-spins-trigger")) {
+      const casinoName = e.target.dataset.casino;
+      const freeSpins = e.target.dataset.spins;
+      modalTitle.textContent = `${freeSpins} at ${casinoName}`;
+      modal.style.display = "block";
+    }
   });
 
+  // Close modal handlers
   closeButton.addEventListener("click", () => {
     modal.style.display = "none";
   });
-
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   });
 
-  const promoCode = document.getElementById("promoCode");
-  const copySuccess = document.getElementById("copySuccess");
-
+  // Promo code copy handler
   promoCode.addEventListener("click", async () => {
-    const codeText = "WELCOME";
     try {
-      await navigator.clipboard.writeText(codeText);
+      await navigator.clipboard.writeText("WELCOME");
       copySuccess.classList.add("show-success");
-
-      // Remove the success message after animation
       setTimeout(() => {
         copySuccess.classList.remove("show-success");
       }, 2000);
