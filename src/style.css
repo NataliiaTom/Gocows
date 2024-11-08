@@ -83,9 +83,9 @@ h1 {
 .new-badge {
   background: #4caf50;
   color: white;
-  padding: 3px 8px;
+  padding: 3px 6px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 10px;
   display: inline-block;
   margin-bottom: 5px;
 }
@@ -575,4 +575,85 @@ progress {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+
+/* Add these media queries at the end of your CSS file */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .casino-card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .casino-info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bonus-info {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .bonus-info div {
+    font-size: 14px;
+    padding: 6px 12px;
+    min-width: auto;
+  }
+
+  .visit-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .casino-info {
+    gap: 10px;
+  }
+
+  .casino-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .casino-details h3 {
+    font-size: 14px;
+  }
+
+  .rating {
+    font-size: 12px;
+  }
+
+  .bonus-info {
+    flex-direction: column;
+  }
+
+  .bonus-info div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 15px;
+  }
+
+  .modal-header h2 {
+    font-size: 18px;
+  }
 }
