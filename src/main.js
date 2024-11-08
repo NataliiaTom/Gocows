@@ -1,57 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hoversButton = document.getElementById("hoversButton");
   const loadMoreButton = document.querySelector(".load-more");
-  let isHovers = true;
-
-  // hoversButton.addEventListener("click", () => {
-  //   isHovers = !isHovers;
-  //   hoversButton.textContent = isHovers ? "HOVERS" : "DEFAULT";
-  //   hoversButton.classList.toggle("hover-view");
-  //   loadMoreButton.classList.toggle("hover-view");
-  // });
-
   const modal = document.getElementById("freeSpinsModal");
-  const freeSpinsButton = document.querySelector(".bonus-info div:first-child");
   const closeButton = document.querySelector(".close");
   const modalTitle = document.querySelector("#freeSpinsModal .modal-header h2");
-
-  // freeSpinsButton.addEventListener("click", () => {
-  //   modal.style.display = "block";
-  // });
-
-  // closeButton.addEventListener("click", () => {
-  //   modal.style.display = "none";
-  // });
-
-  // window.addEventListener("click", (event) => {
-  //   if (event.target === modal) {
-  //     modal.style.display = "none";
-  //   }
-  // });
-
+  let modalContent = document.querySelector(".modal-content");
   const promoCode = document.getElementById("promoCode");
   const copySuccess = document.getElementById("copySuccess");
 
-  // promoCode.addEventListener("click", async () => {
-  //   const codeText = "WELCOME";
-  //   try {
-  //     await navigator.clipboard.writeText(codeText);
-  //     copySuccess.classList.add("show-success");
-
-  //     // Remove the success message after animation
-  //     setTimeout(() => {
-  //       copySuccess.classList.remove("show-success");
-  //     }, 2000);
-  //   } catch (err) {
-  //     console.error("Failed to copy text: ", err);
-  //   }
-  // });
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("free-spins-trigger")) {
       const casinoName = e.target.dataset.casino;
       const freeSpins = e.target.dataset.spins;
       modalTitle.textContent = `${freeSpins} at ${casinoName}`;
       modal.style.display = "block";
+
+      modalContent.style.position = "absolute";
+      modalContent.style.left = `${e.clientX - window.screen.width / 10}px`;
+      modalContent.style.top = `${e.clientY - window.screen.height / 5}px`;
     }
   });
 
